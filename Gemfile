@@ -46,6 +46,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 gem 'autoprefixer-rails'
 gem 'database_cleaner-active_record'
 gem 'faker'
@@ -54,6 +55,7 @@ gem 'friendly_id', '~> 5.3'
 gem 'mini_magick'
 gem 'simple_form'
 gem 'sitemap_generator'
+gem 'slim'
 gem 'uglifier'
 
 group :development, :test do
