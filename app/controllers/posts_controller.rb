@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @posts = ServerCaller.call('get', 'posts')['posts']
   end
 
   def show
