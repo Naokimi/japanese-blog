@@ -9,13 +9,19 @@ class PostsController < ApplicationController
   end
 
   def create
-    response = ServerCaller.call('get', 'posts', params)
+    response = ServerCaller.call('post', 'posts', post_params)
     if response.include?('errors:')
       render :new
     else
-      redirect_to post_path
+      redirect_to posts_path
     end
   end
 
   def new; end
+
+  private
+
+  def post_params
+    { post: params.require(:post).permit(:title, :body).to_h }
+  end
 end

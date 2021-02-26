@@ -11,8 +11,19 @@ class ServerCaller < ApplicationService
           when 'get'
             Net::HTTP.get(@url)
           when 'post'
-            Net::HTTP.post_form(@url, @args)
+            post_request
           end
     JSON.parse(res)
+  end
+
+  private
+
+  def post_request
+    req = Net::HTTP::Post.new(@url, 'Content-Type' => 'application/json')
+    req.body = @args.to_json
+    response = Net::HTTP.start(@url.hostname, @url.port) do |http|
+      http.request(req)
+    end
+    response.body
   end
 end
