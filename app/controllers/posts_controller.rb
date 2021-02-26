@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = ServerCaller.call('get', "posts/#{params[:id]}")
-    @comments = ServerCaller.call('get', "posts/#{params[:id]}/comments")['comments']
+    comments = ServerCaller.call('get', "posts/#{params[:id]}/comments")['comments']
+    @comments = comments.sort_by { |hsh| hsh[:id] }.reverse
   end
 
   def create

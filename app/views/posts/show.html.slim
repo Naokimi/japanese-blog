@@ -1,4 +1,9 @@
 p = @post
+div
+  = simple_form_for :comment, url: post_comments_path(@post['id']) do |f|
+    = f.input :name, as: :string
+    = f.input :body, as: :text
+    = f.submit
 ul
   - @comments.each do |comment|
       li = comment
