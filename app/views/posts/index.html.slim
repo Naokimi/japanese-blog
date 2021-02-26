@@ -1,3 +1,15 @@
-ul
-  - @posts.each do |post|
-      li = post
+div id="content" class="site-content"
+  main id="main" class="site-main inner"
+    div class="post-feed"
+      - @posts.each do |post|
+          article class="post"
+            header class="post-header"
+              h2 class="post-title"
+                = link_to post['title'], post_path(post['id'])
+              div class="post-meta" Published on #{post['created_at'].to_date.strftime("%Y %B %d")}
+            div class="post-content"
+              p #{post['body'].split("\n").first}
+            p class="read-more"
+              = link_to 'Keep reading <span class="icon-arrow-right" aria-hidden="true"></span>'.html_safe, post_path(post['id']), class: 'read-more-link'
+
+

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = ServerCaller.call('get', 'posts')['posts']
+    @posts = ServerCaller.call('get', 'posts')['posts'].sort_by { |hsh| hsh[:id] }.reverse
   end
 
   def show
