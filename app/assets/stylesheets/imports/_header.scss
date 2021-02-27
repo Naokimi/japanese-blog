@@ -3,7 +3,7 @@
  */
 .site-header {
   background: _palette(secondary);
-  color: #fff;
+  color: _palette(white);
   position: relative;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .site-title {
-  color: #fff;
+  color: _palette(white);
   font-size: 1.66667rem;
   font-weight: bold;
   line-height: 1.2;

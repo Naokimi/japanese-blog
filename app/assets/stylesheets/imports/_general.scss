@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: _palette(white);
   color: _palette(primary);
   line-height: 1.66667;
 }
@@ -82,7 +82,7 @@ address {
 
 mark,
 ins {
-  background: #fff493;
+  background: _palette(white)493;
   color: _palette(secondary);
   padding: 0 3px;
   text-decoration: none;
@@ -286,7 +286,7 @@ select {
     right: 10px;
     top: 50%;
     z-index: 1;
-  } 
+  }
 
   &:before {
     border-top-color: _palette(meta);
@@ -321,7 +321,7 @@ input[type="reset"],
   border: 0;
   border-radius: 3px;
   box-sizing: border-box;
-  color: #fff;
+  color: _palette(white);
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
@@ -329,12 +329,13 @@ input[type="reset"],
   padding: 0.9em 30px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  margin-top: 18px;
 
   &:hover,
   &:focus,
   &:active {
     background: _palette(primary);
-    color: #fff;
+    color: _palette(white);
     outline: 0;
   }
 }

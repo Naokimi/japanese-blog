@@ -1,4 +1,6 @@
-= simple_form_for :post, url: posts_path do |f|
-  = f.input :title, as: :string
-  = f.input :body, as: :text
-  = f.submit
+div id="content" class="site-content"
+  main id="main" class="site-main inner"
+    = simple_form_for :post, url: posts_path do |f|
+      = f.input :title, as: :string
+      = f.input :body, as: :text
+      = f.submit
