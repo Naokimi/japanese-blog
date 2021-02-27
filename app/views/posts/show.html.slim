@@ -1,9 +1,23 @@
-p = @post
-div
-  = simple_form_for :comment, url: post_comments_path(@post['id']) do |f|
-    = f.input :name, as: :string
-    = f.input :body, as: :text
-    = f.submit
-ul
+div id="content" class="site-content"
+  main id="main" class="site-main inner"
+    article class="post post-full"
+      header class="post-header"
+        h1 class="post-title"
+          = @post['title']
+        div class="post-meta"
+          | Published on #{@post['created_at'].to_date.strftime("%Y %B %d")}
+      div class="post-content"
+        = @post['body']
+  div
+    = simple_form_for :comment, url: post_comments_path(@post['id']) do |f|
+      = f.input :name, as: :string
+      = f.input :body, as: :text
+      = f.submit
+  div class="comments"
   - @comments.each do |comment|
-      li = comment
+      div class="comment-block"
+        div class="comment-title"
+          div class="comment-name" = comment['name']
+          div class="comment-date" = comment['created_at'].to_datetime.strftime("%Y %B %d %H:%M")
+        div class="comment-body"
+          = comment['body']

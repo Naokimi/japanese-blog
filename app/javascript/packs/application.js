@@ -34,10 +34,8 @@ ActiveStorage.start()
 
 // Mobile menu
 var menuToggle = document.getElementById('menu-toggle');
-console.log(menuToggle)
 if (menuToggle) {
   menuToggle.addEventListener('click', function (e) {
-    console.log('hello');
     document.body.classList.toggle('menu--opened');
     e.preventDefault();
   }, false);
