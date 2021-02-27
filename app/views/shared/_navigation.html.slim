@@ -1,0 +1,16 @@
+nav id="main-navigation" class="site-navigation" aria-label="Main Navigation"
+  div class="site-nav-wrap"
+    div class="site-nav-inside"
+      ul class="menu"
+        li class="menu-item"
+          = link_to 'Home', root_path
+        li class="menu-item"
+          = link_to 'New Post', new_post_path
+      div class="social-links"
+        = link_to '<i class="fab fa-twitter"></i><span class="screen-reader-text">Twitter</span>'.html_safe, 'https://twitter.com/pdalber'
+        = link_to '<i class="fab fa-linkedin-in"></i><span class="screen-reader-text">LinkedIn</span>'.html_safe, 'https://www.linkedin.com/in/paulodal/'
+        = link_to '<i class="fab fa-github"></i><span class="screen-reader-text">GitHub</span>'.html_safe, 'https://github.com/Naokimi'
+        = link_to '<i class="fab fa-medium-m"></i><span class="screen-reader-text">Medium</span>'.html_safe, 'https://medium.com/@phdalberti'
+button id="menu-toggle" class="menu-toggle"
+  span class="jpic-md jpic-ninja"
+  span class="screen-reader-text" Menu
