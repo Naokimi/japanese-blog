@@ -43,3 +43,5 @@ yarn-debug.log*
 .DS_Store
 
 /coverage/*
+
+package-lock.json
