@@ -15,7 +15,7 @@ jobs:
           DB_HOST: 127.0.0.1
           PG_HOST: 127.0.0.1
           PGUSER: japanese_blog_test
-      - image: circleci/postgres:10.15
+      - image: cimg/postgres:10.15
         environment:
           POSTGRES_DB: japanese_blog_test
           POSTGRES_USER: japanese_blog_test
