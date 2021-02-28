@@ -9,6 +9,9 @@ div id="content" class="site-content"
       div class="post-content"
         = @post['body']
   div
+    - if @errors
+      - @errors.each do |error|
+        p style="color: red;" = error
     = simple_form_for :comment, url: post_comments_path(@post['id']), remote: true do |f|
       = f.input :name, as: :string
       = f.input :body, as: :text

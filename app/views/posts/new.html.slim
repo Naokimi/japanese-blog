@@ -1,5 +1,8 @@
 div id="content" class="site-content"
   main id="main" class="site-main inner"
+    - if @errors
+      - @errors.each do |error|
+        p style="color: red;" = error
     = simple_form_for :post, url: posts_path do |f|
       = f.input :title, as: :string
       = f.input :body, as: :text
