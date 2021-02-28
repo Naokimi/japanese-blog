@@ -69,4 +69,4 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'coveralls', require: false
+gem 'coveralls_reborn', '~> 0.20.0', require: false
