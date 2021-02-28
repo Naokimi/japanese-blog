@@ -11,10 +11,10 @@ class PostsController < ApplicationController
 
   def create
     response = ServerCaller.call('post', 'posts', post_params)
-    if response.include?('errors:')
+    if response['errors']
       render :new
     else
-      redirect_to posts_path
+      redirect_to post_path(response['id'])
     end
   end
 
