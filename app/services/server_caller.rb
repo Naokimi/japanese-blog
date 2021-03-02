@@ -14,6 +14,8 @@ class ServerCaller < ApplicationService
             post_request
           end
     JSON.parse(res)
+  rescue Errno::ECONNREFUSED
+    {}
   end
 
   private
