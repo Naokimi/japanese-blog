@@ -24,6 +24,7 @@ class ServerCaller < ApplicationService
 
   def post_request
     req = Net::HTTP::Post.new(@url, 'Content-Type' => 'application/json')
+    req.use_ssl = true if Rails.env == 'production'
     req.body = @args.to_json
     response = Net::HTTP.start(@url.hostname, @url.port) do |http|
       http.request(req)
