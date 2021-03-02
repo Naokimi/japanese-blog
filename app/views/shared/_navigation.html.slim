@@ -3,9 +3,9 @@ nav id="main-navigation" class="site-navigation" aria-label="Main Navigation"
     div class="site-nav-inside"
       ul class="menu"
         li class="menu-item"
-          = link_to 'Home', root_path
+          = link_to '<span class="jpic jpic-itsukushima"></span> Home'.html_safe, root_path
         li class="menu-item"
-          = link_to 'New Post', new_post_path
+          = link_to '<span class="jpic jpic-byoin"></span> New Post'.html_safe, new_post_path
       div class="social-links"
         = link_to '<i class="fab fa-twitter"></i><span class="screen-reader-text">Twitter</span>'.html_safe, 'https://twitter.com/pdalber'
         = link_to '<i class="fab fa-linkedin-in"></i><span class="screen-reader-text">LinkedIn</span>'.html_safe, 'https://www.linkedin.com/in/paulodal/'
