@@ -16,6 +16,8 @@ class ServerCaller < ApplicationService
     JSON.parse(res)
   rescue Errno::ECONNREFUSED
     {}
+  rescue JSON::ParserError
+    {}
   end
 
   private
