@@ -42,9 +42,12 @@
 
 .site-logo {
   margin: 0;
+  font-size: 172px;
+  text-shadow: 4px 4px 2px _palette(secondary);
 
   a {
     border: 0;
+    color: _palette(hanami);
   }
 
   img {
@@ -135,6 +138,10 @@
   right: 4vw;
   top: 3.33333em;
   z-index: 9999;
+}
+
+.menu-icon {
+  font-size: 40px;
 }
 
 .site-navigation-alt {
