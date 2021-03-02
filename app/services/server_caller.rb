@@ -1,6 +1,6 @@
 class ServerCaller < ApplicationService
   def initialize(verb, url, args = {})
-    prefix = Rails.env == 'production' ? 'https://bluethumbart-blog-server.herokuapp.com/' : 'http://localhost:4000/'
+    prefix = Rails.env == 'production' ? 'https://bluethumbart-blog-server.herokuapp.com/api/v1/' : 'http://localhost:4000/'
     @verb = verb
     @url = URI(prefix + url)
     @args = args
